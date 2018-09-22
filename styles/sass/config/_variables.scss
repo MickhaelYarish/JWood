@@ -1,0 +1,36 @@
+
+//Fonts
+@font-face {
+  font-family: "NexaLight";
+  src: url("fonts/NexaLight.ttf")
+  format("opentype");
+}
+@font-face {
+  font-family: "FeltTipWoman";
+  src: url("fonts/FeltTipWoman.ttf")
+  format("opentype");
+}
+@font-face {
+  font-family: "NexaBold";
+  src: url("fonts/NexaBold.otf")
+  format("opentype");
+}
+$nexa-light:"NexaLight";
+$nexa-bold:"NexaBold";
+$felt-tip-woman:"FeltTipWoman";
+$open-sans: 'Open Sans', sans-serif;
+
+//Fonts usage
+$font-family-text: $open-sans;
+$font-family-light: $nexa-light;
+$font-family-bold: $nexa-bold;
+$font-family-signature: $felt-tip-woman;
+
+
+//Colors
+$anthi-flash-white:#f1f1f1;
+$raisin-black:#202020;
+
+//Colors usage
+$color-primary:$anthi-flash-white;
+$color-secondary:$raisin-black;

@@ -1,0 +1,156 @@
+.about-row {
+    .content-block {
+        white-space: nowrap;
+        margin: 45px 110px 22px;
+        .img-container {
+            padding: 6px;
+            display: inline-block;
+            width: 50%;
+            img {
+                width: 96%;
+                height: 492px;
+            }
+        }
+        .about-text-block {
+            display: inline-block;
+            width: 50%;
+            color: $color-secondary;
+            vertical-align: top;
+            padding-top: 57px;
+            h1 {
+                text-transform: uppercase;
+                font-family: $font-family-light;
+                font-size: 46px;
+                font-weight: 300;
+                margin: 0;
+                letter-spacing: 0.039em;
+            }
+            p {
+                text-align: left;
+                white-space: normal;
+                line-height: 1.96;
+                font-size: 18px;
+                font-family: $font-family-text;
+                margin-top: 30px;
+                padding-right: 72px;
+                span {
+                    margin-top: 18px;
+                    display: inline-block;
+                }
+            }
+            .signature {
+                font-family: $felt-tip-woman;
+                font-weight: regular;
+                font-size: 24px;
+                margin-top: 22px;
+                display: inline-block;
+                word-spacing: 0.2em;
+            }
+        }
+    }
+}
+@media (max-width: 543px) {
+  .about-row {
+      .content-block {
+          margin: 0px 0 45px;
+          .img-container {
+              display: block;
+              padding: 0;
+              width: 100%;
+              img {
+                  width: 100%;
+                  height: 100vw;
+              }
+          }
+          .about-text-block {
+              width: 100%;
+              display: block;
+              padding-top: 35px;
+              text-align: center;
+              p {
+                  padding: 0 20px;
+                  text-align: left;
+                  margin-top: 15px;
+                  span {
+                      display: inline;
+                  }
+              }
+              .signature {
+                  margin-top: -6px;
+                  text-align: right;
+                  margin-right: 30px;
+                  display: block;
+              }
+          }
+      }
+  }
+}
+@media (min-width: 544px) and (max-width: 767px) {
+    .about-row {
+        .content-block {
+            margin: 45px 0 0;
+            .img-container {
+                display: block;
+                padding: 0;
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+            .about-text-block {
+                width: 100%;
+                display: block;
+                padding-top: 15px;
+                text-align: center;
+                p {
+                    padding: 0 20px;
+                    text-align: left;
+                    margin-top: 15px;
+                    span {
+                        display: inline;
+                    }
+                }
+                .signature {
+                    margin-top: -6px;
+                    text-align: right;
+                    margin-right: 30px;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .about-row {
+        .content-block {
+            margin: 45px 10px 0;
+            .img-container {
+                width: 49%;
+                img {
+                    height: 392px;
+                }
+            }
+            .about-text-block {
+                padding-top: 5px;
+                p {
+                    margin-top: 10px;
+                    padding-right: 5px;
+                    font-size: 16.3px;
+                }
+                .signature {
+                    margin-top: -6px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .about-row {
+        .content-block {
+            margin: 45px 20px 0;
+        }
+    }
+    .about-row .content-block .about-text-block p {
+        padding-right: 62px;
+    }
+}

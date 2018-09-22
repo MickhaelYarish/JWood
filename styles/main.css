@@ -1,0 +1,791 @@
+.image {
+  cursor: pointer; }
+  .image:hover {
+    opacity: 0.7; }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0; }
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 50vw;
+  height: 40vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.modal-content {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0); }
+  to {
+    -webkit-transform: scale(1); } }
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+.close {
+  position: absolute;
+  top: 3vw;
+  right: 3vw;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+          transition: 0.3s; }
+
+.close:focus,
+.close:hover {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer; }
+
+@media (max-width: 543px) {
+  .modal-content {
+    width: 80vw;
+    height: 325px; } }
+@media (min-width: 544px) and (max-width: 767px) {
+  .modal-content {
+    width: 75vw;
+    height: 70vw; } }
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both; }
+
+@font-face {
+  font-family: "NexaLight";
+  src: url("fonts/NexaLight.ttf") format("opentype"); }
+@font-face {
+  font-family: "FeltTipWoman";
+  src: url("fonts/FeltTipWoman.ttf") format("opentype"); }
+@font-face {
+  font-family: "NexaBold";
+  src: url("fonts/NexaBold.otf") format("opentype"); }
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  margin-top: 0px; }
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+template,
+[hidden] {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects
+  /* 2 */ }
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em
+  /* 2 */ }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible
+  /* 2 */ }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  /* 1 */
+  margin: 0
+  /* 2 */ }
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+optgroup {
+  font-weight: bold; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal
+  /* 1 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit
+  /* 2 */ }
+
+.navigation {
+  text-align: center;
+  margin: 0px 46px;
+  padding: 9px 0px;
+  border-bottom: 2px solid #f1f1f1; }
+  .navigation .navigation-list {
+    padding: 0px; }
+    .navigation .navigation-list .navigation-item {
+      display: inline-block;
+      margin: 0px 8px; }
+      .navigation .navigation-list .navigation-item .navigation-link {
+        text-transform: uppercase;
+        color: #f1f1f1;
+        font-family: "NexaLight";
+        font-size: 16px;
+        text-decoration: none;
+        padding: 10px;
+        -webkit-transition: color 0.55s;
+                transition: color 0.55s; }
+        .navigation .navigation-list .navigation-item .navigation-link:hover {
+          color: gray; }
+
+@media (max-width: 543px) {
+  .navigation {
+    margin: 0px 0px;
+    margin-top: -10px;
+    border-bottom: 2px solid #f1f1f1; }
+    .navigation .navigation-list .navigation-item {
+      float: left;
+      margin: 16px 0px;
+      display: inline-block;
+      width: 50%; }
+      .navigation .navigation-list .navigation-item .navigation-link {
+        padding: 14px; } }
+@media (min-width: 544px) and (max-width: 767px) {
+  .navigation {
+    margin: 0px 26px; } }
+.scroller-container {
+  text-align: center;
+  padding: 24px 0px 14px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #f1f1f1;
+  word-spacing: 0.10em;
+  letter-spacing: 0.11em; }
+  .scroller-container .scroller-text {
+    margin: 0 0 10px;
+    font-family: "NexaBold"; }
+  .scroller-container i.fa.fa-angle-double-down.scroller-icon, .scroller-container footer .contacts-block ul li a .fa.fa-angle-double-down.scroller-icon.fa-facebook, footer .contacts-block ul li a .scroller-container .fa.fa-angle-double-down.scroller-icon.fa-facebook, .scroller-container footer .contacts-block ul li a .fa.fa-angle-double-down.scroller-icon.fa-instagram, footer .contacts-block ul li a .scroller-container .fa.fa-angle-double-down.scroller-icon.fa-instagram {
+    font-size: 46px; }
+
+header {
+  background-image: url("../images/background.jpg");
+  background-size: 1400px;
+  background-repeat: no-repeat;
+  text-align: center; }
+  header .logo {
+    padding: 100px 100px 0;
+    font-family: "NexaBold";
+    color: #f1f1f1; }
+    header .logo .img-holder {
+      position: relative;
+      display: inline-block; }
+      header .logo .img-holder img {
+        height: 335px;
+        width: 335px; }
+      header .logo .img-holder .trademark {
+        position: absolute;
+        right: -2px;
+        top: 21px;
+        text-decoration: none;
+        font-size: 26px; }
+    header .logo h1 {
+      text-transform: uppercase;
+      font-size: 44px;
+      margin-top: 25px;
+      margin-bottom: 55px; }
+      header .logo h1 span, header .logo h1 footer .contacts-block span:nth-child(4), footer .contacts-block header .logo h1 span:nth-child(4) {
+        font-family: "NexaLight";
+        font-weight: 300; }
+
+@media (max-width: 543px) {
+  header .logo {
+    padding: 60px 20px 0; }
+    header .logo .img-holder img {
+      height: 220px;
+      width: 220px; }
+    header .logo .img-holder .trademark {
+      right: 0;
+      top: 6px;
+      font-size: 14px; }
+    header .logo h1 {
+      font-size: 20px; } }
+@media (min-width: 544px) and (max-width: 767px) {
+  header .logo {
+    padding: 100px 20px 0; }
+    header .logo .img-holder img {
+      height: 300px;
+      width: 300px; }
+    header .logo h1 {
+      font-size: 42px; } }
+.about-row .content-block {
+  white-space: nowrap;
+  margin: 45px 110px 22px; }
+  .about-row .content-block .img-container {
+    padding: 6px;
+    display: inline-block;
+    width: 50%; }
+    .about-row .content-block .img-container img {
+      width: 96%;
+      height: 492px; }
+  .about-row .content-block .about-text-block {
+    display: inline-block;
+    width: 50%;
+    color: #202020;
+    vertical-align: top;
+    padding-top: 57px; }
+    .about-row .content-block .about-text-block h1 {
+      text-transform: uppercase;
+      font-family: "NexaLight";
+      font-size: 46px;
+      font-weight: 300;
+      margin: 0;
+      letter-spacing: 0.039em; }
+    .about-row .content-block .about-text-block p {
+      text-align: left;
+      white-space: normal;
+      line-height: 1.96;
+      font-size: 18px;
+      font-family: "Open Sans", sans-serif;
+      margin-top: 30px;
+      padding-right: 72px; }
+      .about-row .content-block .about-text-block p span {
+        margin-top: 18px;
+        display: inline-block; }
+    .about-row .content-block .about-text-block .signature {
+      font-family: "FeltTipWoman";
+      font-weight: regular;
+      font-size: 24px;
+      margin-top: 22px;
+      display: inline-block;
+      word-spacing: 0.2em; }
+
+@media (max-width: 543px) {
+  .about-row .content-block {
+    margin: 0px 0 45px; }
+    .about-row .content-block .img-container {
+      display: block;
+      padding: 0;
+      width: 100%; }
+      .about-row .content-block .img-container img {
+        width: 100%;
+        height: 100vw; }
+    .about-row .content-block .about-text-block {
+      width: 100%;
+      display: block;
+      padding-top: 35px;
+      text-align: center; }
+      .about-row .content-block .about-text-block p {
+        padding: 0 20px;
+        text-align: left;
+        margin-top: 15px; }
+        .about-row .content-block .about-text-block p span {
+          display: inline; }
+      .about-row .content-block .about-text-block .signature {
+        margin-top: -6px;
+        text-align: right;
+        margin-right: 30px;
+        display: block; } }
+@media (min-width: 544px) and (max-width: 767px) {
+  .about-row .content-block {
+    margin: 45px 0 0; }
+    .about-row .content-block .img-container {
+      display: block;
+      padding: 0;
+      width: 100%; }
+      .about-row .content-block .img-container img {
+        width: 100%; }
+    .about-row .content-block .about-text-block {
+      width: 100%;
+      display: block;
+      padding-top: 15px;
+      text-align: center; }
+      .about-row .content-block .about-text-block p {
+        padding: 0 20px;
+        text-align: left;
+        margin-top: 15px; }
+        .about-row .content-block .about-text-block p span {
+          display: inline; }
+      .about-row .content-block .about-text-block .signature {
+        margin-top: -6px;
+        text-align: right;
+        margin-right: 30px;
+        display: block; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-row .content-block {
+    margin: 45px 10px 0; }
+    .about-row .content-block .img-container {
+      width: 49%; }
+      .about-row .content-block .img-container img {
+        height: 392px; }
+    .about-row .content-block .about-text-block {
+      padding-top: 5px; }
+      .about-row .content-block .about-text-block p {
+        margin-top: 10px;
+        padding-right: 5px;
+        font-size: 16.3px; }
+      .about-row .content-block .about-text-block .signature {
+        margin-top: -6px; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .about-row .content-block {
+    margin: 45px 20px 0; }
+
+  .about-row .content-block .about-text-block p {
+    padding-right: 62px; } }
+.portfolio-row {
+  background: #202020;
+  text-align: center; }
+  .portfolio-row h1 {
+    font-family: "NexaLight";
+    font-size: 45px;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 53px 10px 32px;
+    font-weight: 300;
+    letter-spacing: 0.054em; }
+  .portfolio-row .images-container {
+    margin: 0 97px 20px; }
+    .portfolio-row .images-container .image-block {
+      box-sizing: border-box;
+      display: inline-block;
+      padding: 15px;
+      width: 19.6%; }
+      .portfolio-row .images-container .image-block img {
+        width: 100%;
+        height: auto; }
+
+@media (max-width: 543px) {
+  .portfolio-row h1 {
+    font-size: 42px; }
+  .portfolio-row .images-container {
+    margin: 0 15px; }
+    .portfolio-row .images-container .image-block {
+      padding: 15px 10vw 5px;
+      width: 100%; } }
+@media (min-width: 544px) and (max-width: 767px) {
+  .portfolio-row .images-container {
+    margin: 0 5px; }
+    .portfolio-row .images-container .image-block {
+      width: 48.7%; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .portfolio-row .images-container {
+    margin: 0 95px; }
+    .portfolio-row .images-container .image-block {
+      width: 48.7%; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .portfolio-row .images-container {
+    margin: 0 39px; } }
+footer {
+  margin: 0 46px; }
+  footer .contacts-block {
+    padding: 138px;
+    text-transform: uppercase;
+    text-align: center; }
+    footer .contacts-block span, footer .contacts-block span:nth-child(4) {
+      display: block; }
+      footer .contacts-block span:nth-child(odd) {
+        font-size: 23px;
+        margin-bottom: 14px;
+        font-family: "NexaBold"; }
+      footer .contacts-block span:nth-child(even) {
+        letter-spacing: 0.03em;
+        font-size: 46px;
+        margin-bottom: 22.5px;
+        font-family: "NexaLight"; }
+      footer .contacts-block span:nth-child(4) {
+        font-size: 38px;
+        margin-bottom: 32px; }
+    footer .contacts-block ul {
+      padding-left: 0;
+      margin-bottom: 14px; }
+      footer .contacts-block ul li {
+        display: inline-block; }
+        footer .contacts-block ul li a {
+          padding: 10px;
+          margin: 0; }
+          footer .contacts-block ul li a i, footer .contacts-block ul li a .fa-facebook, footer .contacts-block ul li a .fa-instagram {
+            padding: 10px;
+            font-size: 24px;
+            color: #202020;
+            border: 1px solid #202020;
+            border-radius: 50%;
+            -webkit-transition: color 0.4s;
+                    transition: color 0.4s; }
+            footer .contacts-block ul li a i:hover, footer .contacts-block ul li a .fa-facebook:hover, footer .contacts-block ul li a .fa-instagram:hover {
+              color: gray; }
+          footer .contacts-block ul li a .fa-facebook {
+            padding: 10px 14.5px; }
+          footer .contacts-block ul li a .fa-instagram {
+            padding: 10px 11px; }
+  footer .designer {
+    margin-top: -10px;
+    border-top: 1px solid #bebebe;
+    color: #bebebe;
+    font-size: 13px;
+    font-family: "NexaLight";
+    text-align: center;
+    padding: 24px;
+    text-transform: uppercase; }
+
+@media (max-width: 543px) {
+  footer {
+    margin: 0 8px; }
+    footer .contacts-block {
+      padding: 72px 8px; }
+      footer .contacts-block span:nth-child(2) {
+        font-size: 23px; }
+      footer .contacts-block span:nth-child(4) {
+        font-size: 23px; }
+    footer .designer {
+      padding: 24px 8px; } }
+@media (min-width: 544px) and (max-width: 767px) {
+  footer {
+    margin: 0 16px; }
+    footer .contacts-block {
+      padding: 72px 38px; }
+      footer .contacts-block span:nth-child(odd) {
+        font-size: 18px;
+        margin-bottom: 16px; }
+      footer .contacts-block span:nth-child(even) {
+        font-size: 32px;
+        margin-bottom: 21px; }
+      footer .contacts-block span:nth-child(4) {
+        font-size: 28px;
+        margin-bottom: 28px; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  footer .contacts-block {
+    padding: 98px 38px; } }

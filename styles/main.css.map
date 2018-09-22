@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,UAIC;EAHC,WAAW,EAAE,WAAW;EACxB,GAAG,EAAE,6CACa;AAEpB,UAIC;EAHC,WAAW,EAAE,UAAU;EACvB,GAAG,EAAE,4CACa;ACVpB,CAAC;EACC,WAAW,EAAC,WAAW;EACvB,SAAS,EAAC,IAAI;EACd,MAAI;IACF,WAAW,EAAC,UAAU;IACtB,WAAW,EAAC,IAAI;IAChB,SAAS,EAAC,IAAI",
+"sources": ["sass/config/_variables.scss","sass/main.scss"],
+"names": [],
+"file": "main.css"
+}
